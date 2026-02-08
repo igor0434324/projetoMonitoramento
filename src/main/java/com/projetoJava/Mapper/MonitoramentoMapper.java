@@ -1,0 +1,12 @@
+package com.projetoJava.Mapper;
+
+import org.springframework.data.repository.query.Param;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+
+@Mapper
+public interface MonitoramentoMapper {
+
+    Long buscaId(@Param("id") Long id);
+}

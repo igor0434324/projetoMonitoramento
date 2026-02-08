@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: projetoMonitoramento
+
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+
+
+# configuração de desenvolvedor
+
+  datasource:
+    url: jdbc:postgresql://aws-1-sa-east-1.pooler.supabase.com:5432/postgres
+    username: postgres.xjhpthklseofsgaqrrsh
+    password: BGlNxUCxUTHwFdQN
+    driver-class-name: org.postgresql.Driver
+  profiles:
+    active: dev
+
+mybatis:
+  mapper-locations: com.projetoJava.Mapper/*.xml
+  type-aliases-package: com.projetoJava.model
+
+# ===============================
+# SWAGGER / OPENAPI
+# ===============================
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+    disable-swagger-default-url: true
