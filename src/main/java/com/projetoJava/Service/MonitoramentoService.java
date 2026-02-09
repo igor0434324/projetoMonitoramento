@@ -17,6 +17,7 @@ public class MonitoramentoService implements IMonitoramentoService{
 
     @Override
     public Long buscaId(Long id) {
+        log.info("Buscando id: {}", id);
         return monitoramentoMapper.buscaId(id);
     }
 }

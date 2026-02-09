@@ -6,7 +6,7 @@
 <mapper namespace="com.projetoJava.Mapper.MonitoramentoMapper">
 
     <select id="buscaId" resultType="java.lang.Long">
-        SELECT id FROM aluno WHERE id = #{id}
+        SELECT id FROM alunos WHERE id = #{id}
     </select>
 
 </mapper>
